@@ -1,6 +1,7 @@
 package br.edu.ifpb.dac.wandeilson.projetojpa.service;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,5 +19,9 @@ public class ProductService {
 		Product product = new Product(name, description, price);
 		productRepository.save(product);
 		return "Produto salvo com sucesso";
+	}
+	
+	public List<?> getAll() {
+		return productRepository.findAll();
 	}
 }
