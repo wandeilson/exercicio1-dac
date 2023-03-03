@@ -48,8 +48,8 @@ public class ProjetoJpaApplication implements CommandLineRunner{
 			}
 			if(opcao == 2) {
 				List<Product> allProducts = (List<Product>) productController.getAll();
-				System.out.println("Todos produtos cadastrados:\n");
 				for(Product p : allProducts) {
+					System.out.println("_______________________");
 					System.out.println(p);
 				}
 				System.out.println(menu);
@@ -57,7 +57,5 @@ public class ProjetoJpaApplication implements CommandLineRunner{
 				opcao = Integer.parseInt(s.nextLine());
 			}
 		}
-		
 	}
-
 }
